@@ -12,6 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UILabel!
     @IBOutlet weak var stateSwitch: UISwitch!
+    @IBAction func switchSwitched(_ sender: Any) {
+        if stateSwitch.isOn {
+            textField.text = "The Switch is Off"
+        }
+        else {
+            textField.text = "The Switch is On"
+        }
+    }
     @IBAction func buttonClicked(_ sender: Any) {
         if stateSwitch.isOn {
             textField.text = "The Switch is Off"

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-qy-gPh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-qy-gPh">
                                 <rect key="frame" x="141" y="50" width="93" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sha-gP-lcX"/>
@@ -28,13 +28,16 @@
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tid-DA-mkY"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-Sa-04P">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-Sa-04P">
                                 <rect key="frame" x="163" y="161" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="oWO-8D-MFL"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="switchSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="6hh-H0-068"/>
+                                </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Switch is On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-5d-oWg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Switch is On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-5d-oWg">
                                 <rect key="frame" x="123" y="110" width="129" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UQZ-23-Ojc"/>
@@ -46,7 +49,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="C1E-Sa-04P" firstAttribute="centerX" secondItem="GxM-qy-gPh" secondAttribute="centerX" id="02I-J9-FNh"/>
                             <constraint firstItem="a5w-5d-oWg" firstAttribute="top" secondItem="GxM-qy-gPh" secondAttribute="bottom" constant="30" id="cGc-Sn-HAV"/>
+                            <constraint firstItem="C1E-Sa-04P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="duH-Ng-2ns"/>
+                            <constraint firstItem="C1E-Sa-04P" firstAttribute="centerX" secondItem="a5w-5d-oWg" secondAttribute="centerX" id="gZB-pI-CVF"/>
                             <constraint firstItem="GxM-qy-gPh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="p2u-hg-vmU"/>
                             <constraint firstItem="C1E-Sa-04P" firstAttribute="top" secondItem="a5w-5d-oWg" secondAttribute="bottom" constant="30" id="xCr-Fy-bbk"/>
                         </constraints>
