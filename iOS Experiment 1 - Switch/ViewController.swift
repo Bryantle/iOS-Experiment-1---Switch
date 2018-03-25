@@ -10,6 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UILabel!
+    @IBOutlet weak var stateSwitch: UISwitch!
+    @IBAction func buttonClicked(_ sender: Any) {
+        if stateSwitch.isOn {
+            textField.text = "The Switch is Off"
+            stateSwitch.setOn(false, animated: true)
+        }
+        else {
+            textField.text = "The Switch is On"
+            stateSwitch.setOn(true, animated: true)
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
